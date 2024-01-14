@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+             version="2.0">
+    <persistence-unit name="objectdb">
+        <provider>com.objectdb.jpa.Provider</provider>
+        <class>org.example.Potrawa</class>
+        <class>org.example.Klient</class>
+        <class>org.example.PozycjaZamowienia</class>
+        <class>org.example.Pracownik</class>
+        <class>org.example.Rachunek</class>
+        <class>org.example.Stolik</class>
+        <class>org.example.Zamowienie</class>
+        <class>org.example.Zamowienie_Stolik</class>
+
+        <!-- Dodaj resztę klas encji -->
+        <properties>
+            <property name="javax.persistence.jdbc.url" value="objectdb:ścieżka/do/twojej/bazy.odb"/>
+            <!-- Zmodyfikuj ścieżkę do miejsca, gdzie chcesz przechowywać bazę danych -->
+            <property name="javax.persistence.jdbc.user" value="admin"/>
+            <property name="javax.persistence.jdbc.password" value="admin"/>
+        </properties>
+    </persistence-unit>
+</persistence>
